@@ -1,0 +1,20 @@
+<meta charset=" UTF-8 ">
+<h1>Programa</h1>
+<script>
+    function saltoLinea() {
+        document.write("<br><br><br><hr><br><br>");
+    }
+    function imprimir(palabra) {
+        document.write("<big>" + (palabra) + "</big>");  //*Cambio de fuente
+        saltoLinea(); //*Se le agrega por la funcion anterior llamada saltoLinea que nos da 2 espacio y una raya mas otros 2 espacios
+    }
+    function calcularImc(peso, altura, nombre) {    //* agregamos 3 parametros, se leen de izquierda a derecha para cuando los escribamos en la linea 16
+        imcGeneral = peso / (altura * altura);     //* algebra para sacar IMC
+        imprimir("El IMC calculado de "+ nombre + "es " + imcGeneral);    //* la funcion imprimir nos permite 
+    }
+
+calcularImc(78,1.90,"Carlos ");
+calcularImc(77,1.74, "Steve ");
+calcularImc(80, 1.76, "Miguel Angel ");
+
+</script>
